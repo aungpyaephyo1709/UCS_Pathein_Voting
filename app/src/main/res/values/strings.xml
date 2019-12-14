@@ -6,13 +6,6 @@
 
     <string name="choose">Choose your King</string>
     <string-array name="boys_list">
-        <item>Zay Min Paing</item>
-        <item>Aung Pyae Phyo</item>
-        <item>Kaung Khant Paing </item>
-        <item>APP</item>
-        <item>AMP</item>
-        <item>KKP</item>
-
-
+       <item >Choose your King</item>
     </string-array>
 </resources>

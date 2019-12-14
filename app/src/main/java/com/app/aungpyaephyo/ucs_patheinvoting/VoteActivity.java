@@ -32,7 +32,9 @@ public class VoteActivity extends AppCompatActivity implements AdapterView.OnIte
         imageView = findViewById(R.id.image);
 
         addItemsOnSpinner();
+
         addListenerOnButton();
+
         addListenerOnSpinnerItemSelection();
 
     }
@@ -91,10 +93,12 @@ public class VoteActivity extends AppCompatActivity implements AdapterView.OnIte
 
         public void addItemsOnSpinner () {
 
-            List<String> list = Arrays.asList("Choose your King", "Aung Pyae Phyo", "Zay Min Paing", "Kaung Khant Paing");
+        spinner=findViewById(R.id.name);
+        List<String> list = Arrays.asList("Choose your King", "Aung Pyae Phyo", "Zay Min Paing", "Kaung Khant Paing");
 
-            ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.activity_vote, list);
-            dataAdapter.setDropDownViewResource(R.layout.activity_vote);
+         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, list);
+            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinner.setAdapter(dataAdapter);
         }
 
