@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         if (pref.getBoolean("firstrun", true)) {
             // Do first run stuff here then set 'firstrun' as false
             Toast.makeText(this,"first time",Toast.LENGTH_LONG).show();
-            for(int i=1;i<100;i++) {
+            for(int i=1;i<600;i++) {
                db.insertData("1CST_" + i);
             }
             Toast.makeText(this,"data inserted",Toast.LENGTH_LONG).show();
