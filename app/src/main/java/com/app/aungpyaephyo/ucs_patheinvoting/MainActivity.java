@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        myDbAdapter db=new myDbAdapter(this);
         boys=findViewById(R.id.boys);
         girls=findViewById(R.id.girls);
         login=findViewById(R.id.login);
@@ -62,12 +61,10 @@ public class MainActivity extends AppCompatActivity {
         if (pref.getBoolean("firstrun", true)) {
             // Do first run stuff here then set 'firstrun' as false
             Toast.makeText(this,"first time",Toast.LENGTH_LONG).show();
-            for(int i=1;i<600;i++) {
-               db.insertData("1CST_" + i);
-            }
+
             Toast.makeText(this,"data inserted",Toast.LENGTH_LONG).show();
             // using the following line to edit/commit prefs
-            pref.edit().putBoolean("firstrun", false).commit();
+            pref.edit().putBoolean("firstrun", false).apply();
 
         }
         else{
@@ -86,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        myDbAdapter db = new myDbAdapter(this);
+
         if (result != null) {
             //if qrcode has nothing in it
             if (result.getContents() == null) {
@@ -169,10 +166,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.login:
                 qrScan.initiateScan();
                 break;
-            case R.id.boys: {
+                case R.id.boys: { Intent intent = new Intent(this, RecyclerViewActivity.class);
+                startActivity(intent);
+                finish();
 
-                myDbAdapter db = new myDbAdapter(this);
-                Toast.makeText(this, db.getData(), Toast.LENGTH_LONG).show();
             }
             break;
             case R.id.girls: {
