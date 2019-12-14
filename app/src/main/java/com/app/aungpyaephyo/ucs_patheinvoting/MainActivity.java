@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
                     if(db.getData(result.getContents()).equals(result.getContents()))
                     {
-                        Intent intent=new Intent(this,VoteActivity.class);
+                        Intent intent=new Intent(this,RecyclerViewActivity.class);
                         startActivity(intent);
                         this.finish();
                     }
