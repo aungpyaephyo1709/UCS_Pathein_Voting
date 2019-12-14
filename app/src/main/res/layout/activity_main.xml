@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+
+<RelativeLayout
+    android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cu_icon">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boys"
+            android:onClick="btnClick"
+            android:background="@color/btn_color"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="70dp"
+            android:id="@+id/boys"
+            />
+
+    <Button
+        android:id="@+id/girls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="Girls"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="70dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="@color/btn_color"
+        android:onClick="btnClick"
+        android:id="@+id/login"/>
+</RelativeLayout>
+</LinearLayout>
