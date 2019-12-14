@@ -1,13 +1,13 @@
 package com.app.aungpyaephyo.ucs_patheinvoting;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
                     if(db.getData(result.getContents()).equals(result.getContents()))
                     {
-                        Intent intent=new Intent(this,RecyclerViewActivity.class);
+                        Intent intent = new Intent(this, VoteActivity.class);
                         startActivity(intent);
                         this.finish();
                     }
@@ -111,9 +111,8 @@ public class MainActivity extends AppCompatActivity {
             }
             break;
             case R.id.girls: {
-                myDbAdapter db = new myDbAdapter(this);
-
-                Toast.makeText(this, db.getData("1CST_49"), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, RecyclerViewActivity.class);
+                startActivity(intent);
 
             }
             break;
