@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">UCS_Pathein Voting</string>
-    <string name="button">Button</string>
-    <string name="king">Who is your King?</string>
-    <string name="vote">Vote</string>
+    <string name="app_name" translatable="false">UCS_PatheinVoting</string>
+    <string name="button" translatable="false">Button</string>
+    <string name="king" translatable="false">Who is your King?</string>
+    <string name="vote" translatable="false">Vote</string>
 
-    <string name="choose">Choose your King</string>
+    <string name="choose" translatable="false">Choose your King</string>
     <string-array name="boys_list">
         <item>Choose your King</item>
     </string-array>
-    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_splash" translatable="false">SplashActivity</string>
 </resources>

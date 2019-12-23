@@ -10,6 +10,7 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView =  findViewById(R.id.recycler_view);
 
         albumList = new ArrayList<>();
         adapter = new CardsAdapter(this, albumList);
@@ -33,9 +34,20 @@ public class RecyclerViewActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
-        prepareAlbums();
+        Bundle selection=getIntent().getExtras();
+        if(selection!=null){
+            String selected=selection.getString("data");
+            if(selected.equals("boys")){
+                Toast.makeText(this,selected,Toast.LENGTH_LONG).show();
+            }
+            else {
+                prepareAlbumsGirls();
+            }
+
+        }
+
     }
-    private void prepareAlbums() {
+    private void prepareAlbumsGirls() {
 
         Card a = new Card("IU", "1CST-1", R.drawable.album1);
         albumList.add(a);

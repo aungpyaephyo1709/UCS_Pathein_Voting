@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/selection_layout"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="400dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,27 +15,47 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:weightSum="10"
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/img"
                 android:src="@mipmap/ic_launcher"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="600dp"/>
-            <TextView
-                android:id="@+id/tv_name"
-                android:text="Zay Min Paing"
-                android:textColor="@android:color/black"
-                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:scaleType="fitXY"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="8"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/tv_rno"
-                android:text="5CS-1"
-                android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_weight="1"
+                        android:text="Aung Pyae Phyo"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_rno"
+                        android:text="5CS-49"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

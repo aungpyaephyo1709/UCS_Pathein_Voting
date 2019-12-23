@@ -26,9 +26,9 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.MyViewHolder
 
         public MyViewHolder(View view) {
             super(view);
-            name = (TextView) view.findViewById(R.id.tv_name);
-            rno = (TextView) view.findViewById(R.id.tv_rno);
-            img = (ImageView) view.findViewById(R.id.img);
+            name =view.findViewById(R.id.tv_name);
+            rno =  view.findViewById(R.id.tv_rno);
+            img =  view.findViewById(R.id.img);
         }
     }
 
@@ -65,13 +65,13 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.MyViewHolder
         holder.rno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext,holder.name.getText(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext,holder.rno.getText(),Toast.LENGTH_SHORT).show();
             }
         });
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext,holder.name.getText(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext,holder.img.getMaxHeight  (),Toast.LENGTH_SHORT).show();
             }
         });
     }

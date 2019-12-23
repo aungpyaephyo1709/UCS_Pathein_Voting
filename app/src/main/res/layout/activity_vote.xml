@@ -58,7 +58,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"
                 android:alpha="0.9"
-                android:src="@drawable/myphoto"
+                android:src="@drawable/splah_welcome"
 
                 android:scaleType="fitXY"/>
         </LinearLayout>
